@@ -26,7 +26,12 @@
 #include "PCD8544.h"
 
 #include <Arduino.h>
-#include <avr/pgmspace.h>
+
+#if (defined(__AVR__))
+#include <avr\pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
 
 extern const PROGMEM unsigned char font5x8[][5];
 

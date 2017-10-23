@@ -1,4 +1,9 @@
-#include <avr/pgmspace.h>
+#if (defined(__AVR__))
+#include <avr\pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
+
 //#include <util/delay.h>
 #include <stdlib.h>
 #include <Wire.h>
